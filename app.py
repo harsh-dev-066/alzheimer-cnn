@@ -18,14 +18,20 @@ SIZE = 120
 
 @app.route('/')
 def home():
-    return render_template("index.html")
+    return render_template("home.html")
+
+
+@app.route('/<string:page_name>')
+def html_page(page_name):
+    return render_template(page_name)
 
 
 @app.route('/upload', methods=['POST', 'GET'])
 def Upload():
     if request.method == 'POST':
+        print(request)
         file = request.files['image']
-        print(file)
+        print('file', file)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], '1.png'))
 
         model = keras.models.load_model(r'./model/model_16.h5')
@@ -42,9 +48,10 @@ def Upload():
         realvalue = "Real Value 1"
         print('success')
         img = "./static/uploader/1.png"
+        # return redirect(url_for('result', value=pValue))
         return render_template('result.html', value=pValue)
 
-    return render_template('index.html')
+    return render_template('home.html')
 
 
 if __name__ == "__main__":
