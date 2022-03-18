@@ -48,7 +48,6 @@ def Upload():
         realvalue = "Real Value 1"
         print('success')
         img = "./static/uploader/1.png"
-        # return redirect(url_for('result', value=pValue))
         return render_template('result.html', value=pValue)
 
     return render_template('home.html')

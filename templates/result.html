@@ -20,10 +20,16 @@
 
 <body>
   <header id="head-res" class="header">
+    <div style="position: relative; top: 5rem; left: 3rem;">
+      <a href="/" style="border-radius: 5px;" class="ui inverted huge button">
+        <i class="home icon"></i>
+        Home
+      </a>
+    </div>
     <div class="page">
       <div class="intro">
         <div class="intro__text">
-          <h1 style="padding-top: 2rem" class="intro__text--heading u-bold-txt">
+          <h1 style="padding-top: 1rem" class="intro__text--heading u-bold-txt">
             DIAGNOSIS OF ALZHEIMER’S DISEASE USING CNN ON MRI DATA</h1>
         </div>
       </div>
@@ -50,7 +56,7 @@
                 <form action="" method='POST' enctype="multipart/form-data">
                     <p style="margin-bottom: 1rem;">{{value}}</p>
                     
-                    <img src="static\uploader\1.png" alt="result">
+                    <img src="..\static\uploader\1.png" alt="result">
                 </form>
                 {% else %}
                 <p>Choose an image to see results.</p>

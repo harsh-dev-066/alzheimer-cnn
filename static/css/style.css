@@ -406,17 +406,7 @@ footer {
     align-self: center; }
   .footer__base--location {
     width: 100%; } }
-
-.file {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 2rem 1.5rem;
-  font: 1rem/1.5 "PT Sans", Arial, sans-serif;
-  color: #5a5a5a;
-}
-
+    
 input[type=file]::file-selector-button {
  display: none;
 }
